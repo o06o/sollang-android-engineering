@@ -16,8 +16,9 @@
 2. [`SleepTimerEngineTest`](src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) — 교체·중복 alarm·clock reset 회귀 테스트
 3. [백그라운드 재생과 수면 타이머](docs/case-studies/playback-and-sleep-timer.md)
 4. [실시간 채팅 신뢰성](docs/case-studies/realtime-chat-reliability.md)
-5. [멀티모듈 경계를 빌드 규칙으로 바꾸기](docs/case-studies/architecture-guardrails.md)
-6. [AI를 활용한 Android → iOS 개발](docs/ai-assisted-ios-development.md)
+5. [Compose 재구성·렌더링 성능 트러블슈팅](docs/case-studies/compose-runtime-performance.md)
+6. [멀티모듈 경계를 빌드 규칙으로 바꾸기](docs/case-studies/architecture-guardrails.md)
+7. [AI를 활용한 Android → iOS 개발](docs/ai-assisted-ios-development.md)
 
 ## 프로젝트에서 다룬 문제
 
@@ -27,6 +28,7 @@
 | 수면 타이머 | 화면 종료, process 재생성, 중복 alarm | monotonic clock + 영속 상태 + idempotent expiration |
 | 채팅 | STOMP 연결 끊김, 무응답, 재연결 중 중복 응답 | lifecycle-aware reconnect + timeout + deduplication |
 | 상태 관리 | Compose 화면과 비즈니스 상태 결합 | state/action 경계 + `StateFlow`/`SharedFlow` |
+| Compose 성능 | 고빈도 state와 animation이 넓은 UI를 무효화 | state 분리 + draw/layout 단계에서 늦게 읽기 |
 | 아키텍처 | 모듈 규칙이 문서에서만 존재 | convention plugin + architecture lint |
 | 배포 | 검증되지 않은 커밋의 배포 진입 | GitHub Actions test gate + Jenkins 배포 gate |
 | 크로스 플랫폼 | Android 동작을 iOS에 단순 복사할 위험 | 제품 계약 공유 + 플랫폼별 구현과 검증 |
