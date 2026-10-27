@@ -4,23 +4,25 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.3.20-7F52FF.svg)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-운영 중인 웰니스 앱 **Sollang**에서 다룬 Android 설계 문제를 공개 가능한 형태로 정리한
+출시를 앞둔 웰니스 앱 **Sollang**(스토어 심사 중)에서 다룬 Android 설계 문제를 공개 가능한 형태로 정리한
 엔지니어링 포트폴리오입니다.
 
 제품 저장소 전체를 복제한 프로젝트가 아닙니다. 서버 주소, 인증 정보, 디자인 자산과 제품 코드는
 포함하지 않았고, 핵심 신뢰성 로직은 독립적으로 실행되는 작은 Kotlin 샘플로 다시 작성했습니다.
 
-## 10분 리뷰 경로
+## 5분 리뷰 경로
 
 1. [`SleepTimerEngine`](src/main/kotlin/dev/o06o/sollang/timer/SleepTimerEngine.kt) — 타이머 복구와 중복 만료 방지
 2. [`SleepTimerEngineTest`](src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) — 교체·중복 alarm·clock reset 회귀 테스트
-3. [백그라운드 재생과 수면 타이머](docs/case-studies/playback-and-sleep-timer.md)
-4. [실시간 채팅 신뢰성](docs/case-studies/realtime-chat-reliability.md)
-5. [Compose 재구성·렌더링 성능 트러블슈팅](docs/case-studies/compose-runtime-performance.md)
-6. [멀티모듈 경계를 빌드 규칙으로 바꾸기](docs/case-studies/architecture-guardrails.md)
-7. [Git·브랜치·CI/CD 운영 정책](docs/case-studies/git-branch-and-cicd.md)
-8. [Amplitude 기반 제품 분석 설계](docs/case-studies/product-analytics-with-amplitude.md)
-9. [AI를 활용한 Android → iOS 개발](docs/ai-assisted-ios-development.md)
+3. [Compose 재구성·렌더링 성능 트러블슈팅](docs/case-studies/compose-runtime-performance.md)
+
+더 보기:
+[백그라운드 재생](docs/case-studies/playback-and-sleep-timer.md) ·
+[실시간 채팅](docs/case-studies/realtime-chat-reliability.md) ·
+[멀티모듈 경계](docs/case-studies/architecture-guardrails.md) ·
+[Git·CI/CD](docs/case-studies/git-branch-and-cicd.md) ·
+[Amplitude 제품 분석](docs/case-studies/product-analytics-with-amplitude.md) ·
+[AI 활용 Android → iOS](docs/ai-assisted-ios-development.md)
 
 ## 프로젝트에서 다룬 문제
 
