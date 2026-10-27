@@ -18,7 +18,9 @@
 4. [실시간 채팅 신뢰성](docs/case-studies/realtime-chat-reliability.md)
 5. [Compose 재구성·렌더링 성능 트러블슈팅](docs/case-studies/compose-runtime-performance.md)
 6. [멀티모듈 경계를 빌드 규칙으로 바꾸기](docs/case-studies/architecture-guardrails.md)
-7. [AI를 활용한 Android → iOS 개발](docs/ai-assisted-ios-development.md)
+7. [Git·브랜치·CI/CD 운영 정책](docs/case-studies/git-branch-and-cicd.md)
+8. [Amplitude 기반 제품 분석 설계](docs/case-studies/product-analytics-with-amplitude.md)
+9. [AI를 활용한 Android → iOS 개발](docs/ai-assisted-ios-development.md)
 
 ## 프로젝트에서 다룬 문제
 
@@ -30,7 +32,8 @@
 | 상태 관리 | Compose 화면과 비즈니스 상태 결합 | state/action 경계 + `StateFlow`/`SharedFlow` |
 | Compose 성능 | 고빈도 state와 animation이 넓은 UI를 무효화 | state 분리 + draw/layout 단계에서 늦게 읽기 |
 | 아키텍처 | 모듈 규칙이 문서에서만 존재 | convention plugin + architecture lint |
-| 배포 | 검증되지 않은 커밋의 배포 진입 | GitHub Actions test gate + Jenkins 배포 gate |
+| 배포 | 승인 뒤 branch HEAD가 달라지거나 검증 실패 커밋이 배포될 위험 | Actions gate + Slack 승인 + Jenkins의 `branch@sha` 배포 |
+| 제품 분석 | 화면 구조와 SDK에 종속된 이벤트, 개인정보 과수집 | SDK 독립 계약 + Amplitude 환경 분리 + 최소 수집 |
 | 크로스 플랫폼 | Android 동작을 iOS에 단순 복사할 위험 | 제품 계약 공유 + 플랫폼별 구현과 검증 |
 
 ## 구조
